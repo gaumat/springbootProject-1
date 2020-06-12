@@ -6,4 +6,6 @@ import practice.springboot.model.Employee;
 public interface UserDao {
      
 	public List<Employee> getEmployeesByFirstName(String firstName);
+
+	public String createEmployee(Employee employee);
 }
