@@ -20,13 +20,13 @@ public class EmployeeController {
 	
 	
 	@RequestMapping(value="/employees",method=RequestMethod.GET)
-	public List<Employee> getUsersByFirstName(@RequestParam String firstName){
+	public List<Employee> getEmployeesByFirstName(@RequestParam String firstName){
 		List<Employee> employees = myService.getEmployeesDetailsByFirstName(firstName);
 		return employees;
 	}
 	
 	@RequestMapping(value="/employees",method=RequestMethod.POST)
-	public String createUser(@RequestBody Employee employee){
+	public String createEmployee(@RequestBody Employee employee){
 		String id =  myService.createEmployee(employee);
 		return id;
 	}
