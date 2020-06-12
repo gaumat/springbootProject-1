@@ -23,4 +23,11 @@ public class MyServiceImpl implements MyService {
 	}
 
 
+	@Override
+	public String createEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return userdao.createEmployee(employee);
+	}
+
+
 }
