@@ -43,4 +43,11 @@ public class UserDaoImpl implements UserDao{
 		return String.valueOf(employee.getId());
 	}
 
+
+	@Override
+	public List<Employee> listEmployees() {
+		Query q = entityManager.createQuery("select e from Employee e");
+		return q.getResultList();
+	}
+
 }

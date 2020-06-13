@@ -20,7 +20,9 @@ public class EmployeeController {
 	
 	
 	@RequestMapping(value="/employees",method=RequestMethod.GET)
-	public List<Employee> getEmployeesByFirstName(@RequestParam String firstName){
+	public List<Employee> getEmployeesByFirstName(@RequestParam(required = false) String firstName){
+		if(firstName == null || firstName.isEmpty())
+			return myService.listEmployees();
 		List<Employee> employees = myService.getEmployeesDetailsByFirstName(firstName);
 		return employees;
 	}
@@ -30,5 +32,6 @@ public class EmployeeController {
 		String id =  myService.createEmployee(employee);
 		return id;
 	}
+	
 	
 }

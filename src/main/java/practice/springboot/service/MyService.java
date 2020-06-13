@@ -9,4 +9,6 @@ public interface MyService {
 	public  List<Employee>getEmployeesDetailsByFirstName(String firstName);
 	
 	public String createEmployee(Employee employee);
+
+	public List<Employee> listEmployees();
 }

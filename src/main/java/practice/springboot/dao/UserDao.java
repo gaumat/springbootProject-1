@@ -8,4 +8,6 @@ public interface UserDao {
 	public List<Employee> getEmployeesByFirstName(String firstName);
 
 	public String createEmployee(Employee employee);
+
+	public List<Employee> listEmployees();
 }

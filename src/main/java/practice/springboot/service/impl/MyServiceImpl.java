@@ -30,4 +30,11 @@ public class MyServiceImpl implements MyService {
 	}
 
 
+	@Override
+	public List<Employee> listEmployees() {
+		// TODO Auto-generated method stub
+		return userdao.listEmployees();
+	}
+
+
 }
